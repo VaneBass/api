@@ -7,12 +7,15 @@ const routes = require("./routes");
 
 dotenv.config();
 
+let mongoUrl =
+  "mongodb+srv://dbUser:4fAD5gzjtpTDAg51@mgcluster.btzks.mongodb.net/blog?retryWrites=true&w=majority";
+
 // 连接数据库
 main().catch((err) => console.log(err));
 
 async function main() {
   await mongoose
-    .connect(process.env.MONGO_URL, {
+    .connect(mongoUrl, {
       autoIndex: false,
     })
     .then(console.log("Connected to MongoDB"));
