@@ -33,6 +33,6 @@ app.use(express.json());
 routes(app);
 
 // 监听端口
-app.listen("5000", () => {
+app.listen(process.env.PORT, () => {
   console.log("Backend is running...");
 });
