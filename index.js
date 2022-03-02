@@ -4,6 +4,7 @@ const dotenv = require("dotenv");
 const mongoose = require("mongoose");
 const routes = require("./routes");
 
+// 使用 dotenv
 dotenv.config();
 
 // 连接数据库
