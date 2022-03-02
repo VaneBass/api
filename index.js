@@ -3,7 +3,6 @@ const app = express();
 const dotenv = require("dotenv");
 const mongoose = require("mongoose");
 const routes = require("./routes");
-// const path = require("path");
 
 dotenv.config();
 
@@ -29,12 +28,6 @@ app.all("*", (request, response, next) => {
 
 // 解析json
 app.use(express.json());
-
-// app.use(express.static(path.join(__dirname, "./client/build")));
-
-// app.get("/*", function (req, res) {
-//   res.sendFile(path.join(__dirname, "./client/build/index.html"));
-// });
 
 // 挂载子路由
 routes(app);
